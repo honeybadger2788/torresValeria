@@ -1,0 +1,117 @@
+/*========================
+PANTALLA GASTOS
+==========================*/
+
+section.gastos {
+    width: 50%;
+    padding: 20px;
+    background: var(--color-mintcream);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.gastos nav.menu {
+    align-self: start;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+ul li {
+    list-style: none;
+    padding: 5px;
+}
+
+#burger, label.menuMobile {
+    display: none;
+    align-self: start;
+}
+
+label img {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+section.gastos hr {
+    width: 90%;
+    border-color: var(--color-cambridge);
+    border: 1px solid;
+    margin: 20px 0;
+}
+
+section.gastos form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 75%;
+}
+
+section.gastos form input {
+    background: var(--color-lightcyan);
+    height: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    margin: 15px 0;
+    padding: 15px 10px;
+}
+
+section.gastos form select {
+    background: var(--color-lightcyan);
+    height: 2rem;
+    border: none;
+    border-radius: 10px;
+    margin: 15px 0;
+    padding-left: 10px;
+}
+
+section.gastos form textarea {
+    background: var(--color-lightcyan);
+    border: none;
+    border-radius: 10px;
+    margin: 15px 0;
+    padding: 10px 15px;
+}
+
+section.gastos form button.cargar {
+    background: var(--color-wintergreen);
+    color: var(--color-mintcream);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    align-self: center;
+    font-family: Roboto;
+    font-weight: bold;
+}
+
+section.gastos form button.cargar:hover {
+    color: var(--color-wintergreen);
+    background: var(--color-lightcyan);
+}
+
+
+@media (max-width:768px){
+
+    section.gastos {
+        width: 100%;
+        height: 100vh;
+    }
+
+    section.gastos nav.menu { 
+        display: none; 
+    }
+    
+    label.menuMobile { display: block;}
+
+    #burger:checked ~ nav.menu {
+        display: block;
+    }
+    
+    section.gastos hr {
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+
+    section.gastos form {height: 100vh;}
+
+}

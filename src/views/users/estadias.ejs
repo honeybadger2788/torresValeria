@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head')%>
+<body>
+    <section class="estadias">
+        <input type="checkbox" id="burger">
+        <label for="burger" class="menuMobile"><img src="/img/mobileMenu.png" alt=""></label>
+        <nav class="menu">
+            <ul>
+                <li><a href="/user/gastos">Carga de gastos</a></li>
+                <li><a href="/user/estadias">Carga de estadías</a></li>
+                <li><a href="/user/informe">Estado actual de cuentas</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <form action="/user/estadias" method="POST">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="fechaIn">Fecha de ingreso</label>
+            <input type="date" id="fechaIn" name="fechaIn" required>
+
+            <label for="fechaOut">Fecha de egreso</label>
+            <input type="date" id="fechaOut" name="fechaOut" required>
+
+            <label for="importeTotal">Importe Total</label>
+            <input type="text" id="importeTotal" name="importeTotal" required>
+
+            <label for="importeDepo">Importe Depósito</label>
+            <input type="text" id="importeDepo" name="importeDepo" required>
+
+            <label>Unidad</label>
+            <select name="tipoGasto" required>
+                <option value="none" selected disabled hidden> 
+                    Selecciona una opción 
+                </option>
+                <option value="An">Antares</option>
+                <option value="Al">Altair</option>
+                <option value="Di">Diana</option>
+                <option value="El">Electra</option>
+            </select>
+
+            <label for="pagador">Cobrado por</label>
+            <select id="pagador" name="pagador" required>
+                <option value="none" selected disabled hidden> 
+                    Selecciona una opción 
+                </option>
+                <option value="Ar">Ariel</option>
+                <option value="Ba">Barbara</option>
+                <option value="Fa">Facundo</option>
+            </select>
+
+
+            <button class="cargar" type="submit">CARGAR</button>
+        </form>
+    </section>
+</body>
+</html>

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import 'styleLogin.css';
+@import 'styleIndex.css';
+@import 'styleGastos.css';
+@import 'styleEstadias.css';
+@import 'styleInforme.css';
+
+:root {
+    --color-wintergreen: #6B9080;
+    --color-cambridge: #A4C3B2; 
+    --color-lightcyan: #CCE3DE;
+    --color-mintcream: #EAF4F4; 
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background: url("/img/torresvaleria.jpg");
+    background-size: cover;
+    color: var(--color-wintergreen);
+    font-family: Roboto;
+    font-weight: bold;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label.menuMobile {
+    margin-bottom: 10px;
+}
+
+@media (max-width:768px){
+    body {
+        background: var(--color-mintcream);
+        display: block;
+    }
+}

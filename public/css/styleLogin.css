@@ -1,0 +1,66 @@
+/*========================
+PANTALLA LOGIN
+==========================*/
+
+section.login{
+    height: max-content;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-mintcream);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+section.login h1 { 
+    margin: 20px 0; 
+    padding: 0 80px;
+    text-align: center;
+}
+
+section.login hr { 
+    width: 75%;
+    border-color: var(--color-cambridge);
+    border: 2px solid;
+    margin: 20px 0;
+}
+
+.boton {
+    background: var(--color-wintergreen);
+    color: var(--color-mintcream);
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+}
+
+.boton:hover {
+    color: var(--color-wintergreen);
+    background: var(--color-lightcyan);
+}
+
+form.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+form.login label {
+    margin-bottom: 20px;
+}
+
+form.login input {
+    border-radius: 10px;
+    border: none;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width:768px){
+   section.login {
+        width: 100%;
+    }
+}

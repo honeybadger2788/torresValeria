@@ -1,0 +1,68 @@
+/*========================
+PANTALLA INFORME
+==========================*/
+
+section.informe {
+    width: 70%;
+    padding: 2.5%;
+    background: var(--color-mintcream);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.informe nav.menu {
+    align-self: start;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+ul li {
+    list-style: none;
+    padding: 5px;
+}
+
+#burger, label.menuMobile {
+    display: none;
+    align-self: start;
+}
+
+label img {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+section.informe hr {
+    width: 90%;
+    border-color: var(--color-cambridge);
+    border: 1px solid;
+    margin: 20px 0;
+}
+
+
+@media (max-width:768px){
+
+    section.informe {
+        width: 100%;
+        height: 100vh;
+    }
+
+    section.informe nav.menu { 
+        display: none; 
+    }
+    
+    label.menuMobile { display: block;}
+
+    #burger:checked ~ nav.menu {
+        display: block;
+    }
+    
+    section.informe hr {
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+
+    section.informe table {height: 100vh;}
+
+}

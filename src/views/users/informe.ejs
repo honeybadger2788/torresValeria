@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head')%>
+</head>
+<body>
+    <section class="informe">
+        <input type="checkbox" id="burger">
+        <label for="burger" class="menuMobile"><img src="/img/mobileMenu.png" alt=""></label>
+        <nav class="menu">
+            <ul>
+                <li><a href="/user/gastos">Carga de gastos</a></li>
+                <li><a href="/user/estadias">Carga de estadías</a></li>
+                <li><a href="/user/informe">Estado actual de cuentas</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <table class="table table-success table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Detalle</th>
+                    <th scope="col">Abonado por/Cobrado por</th>
+                    <th scope="col">Ingreso</th>
+                    <th scope="col">Egreso</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td><a class="edit" href="">EDITAR</a></td>
+                    <td><a class="borrar" href=""><img src="/img/basura.png" height="20" alt=""></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

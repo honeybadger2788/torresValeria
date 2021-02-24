@@ -14,6 +14,9 @@
         </nav>
         <hr>
         <form action="/user/gastos" method="POST">
+            <label for="fechaGasto">Fecha de gasto</label>
+            <input type="date" id="fechaGasto" name="fechaGasto" required>
+
             <label for="concepto">Concepto</label>
             <input type="text" id="concepto" name="concepto" required>
             
@@ -45,9 +48,6 @@
             
             <label for="comentario">Comentario</label>
             <textarea id="comentario" name="comentario" rows="5"></textarea>
-            
-            <label for="fechaGasto">Fecha de gasto</label>
-            <input type="date" id="fechaGasto" name="fechaGasto" required>
             
             <button class="cargar" type="submit">CARGAR</button>
         </form>

@@ -73,23 +73,6 @@ section.gastos form textarea {
     padding: 10px 15px;
 }
 
-section.gastos form button.cargar {
-    background: var(--color-wintergreen);
-    color: var(--color-mintcream);
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    align-self: center;
-    font-family: Roboto;
-    font-weight: bold;
-}
-
-section.gastos form button.cargar:hover {
-    color: var(--color-wintergreen);
-    background: var(--color-lightcyan);
-}
-
-
 @media (max-width:768px){
 
     section.gastos {

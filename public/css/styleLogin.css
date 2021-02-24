@@ -27,19 +27,6 @@ section.login hr {
     margin: 20px 0;
 }
 
-.boton {
-    background: var(--color-wintergreen);
-    color: var(--color-mintcream);
-    border-radius: 10px;
-    border: none;
-    padding: 10px 20px;
-}
-
-.boton:hover {
-    color: var(--color-wintergreen);
-    background: var(--color-lightcyan);
-}
-
 form.login {
     display: flex;
     flex-direction: column;

@@ -51,22 +51,6 @@ section.estadias form select {
     padding-left: 10px;
 }
 
-section.estadias form button.cargar {
-    background: var(--color-wintergreen);
-    color: var(--color-mintcream);
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    align-self: center;
-    font-family: Roboto;
-    font-weight: bold;
-}
-
-section.estadias form button.cargar:hover {
-    color: var(--color-wintergreen);
-    background: var(--color-lightcyan);
-}
-
 @media (max-width:768px){
     section.estadias {
         width: 100%;

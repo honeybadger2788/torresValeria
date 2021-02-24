@@ -38,6 +38,22 @@ label.menuMobile {
     margin-bottom: 10px;
 }
 
+button.cargar {
+    background: var(--color-wintergreen);
+    color: var(--color-mintcream);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    align-self: center;
+    font-family: Roboto;
+    font-weight: bold;
+}
+
+button.cargar:hover {
+    color: var(--color-wintergreen);
+    background: var(--color-lightcyan);
+}
+
 @media (max-width:768px){
     body {
         background: var(--color-mintcream);

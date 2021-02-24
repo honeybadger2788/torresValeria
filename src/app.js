@@ -1,5 +1,4 @@
 const express = require ("express");
-/*const bootstrap = require('bootstrap');*/
 const app = express();
 const path = require('path');
 const mainRouter = require('./routes/mainRoutes');

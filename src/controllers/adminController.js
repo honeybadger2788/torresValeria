@@ -19,9 +19,7 @@ module.exports = {
             })
         } else {
             res.render('./admin/register', {
-                errors: [
-                    {msg: 'Las contraseñas no coinciden'}
-                ]
+                errors: errors.errors
             });
         }
     }

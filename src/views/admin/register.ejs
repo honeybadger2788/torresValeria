@@ -6,7 +6,11 @@
         <hr>
         <h3>CREAR NUEVO USUARIO</h1>
         <form class="login" action="" method="POST">
-            <p style="color: red"><%= errors == undefined ? null : errors[0].msg %></p>
+            <ul>
+                <% for(let i = 0; i < errors.length; i++ ) { %>
+                    <li style="color: red"><%= errors[i].msg %> </li>
+                <% } %>  
+            </ul>
             <label for="user">Usuario</label>
             <input type="text" name="user" id="user">
             <label for="password">Contraseña</label>

@@ -1,22 +1,31 @@
 const fs = require('fs');
 const bcrypt = require ('bcrypt');
 const path = require ('path');
-const route = path.join (__dirname, '../usuarios.json');
-let usuariosArray = JSON.parse(fs.readFileSync(route,{encoding:'utf-8'}));
+const db = require ('../database/models/index');
 
 module.exports = {
     main: function (req,res){
         res.render('./index');
     },
     login: function (req,res){
-        for (let i = 0; i < usuariosArray.length; i++) {
-            if(usuariosArray[i].email == req.body.email){
-                if(bcrypt.compareSync(req.body.password,usuariosArray[i].password)){
-                    usuarioLogueado = usuariosArray[i];
-                    break;
-                }
-            } 
+        let usuarioLogueado;
+        let usuarioBuscado = db.Usuario.findOne({
+            where: {
+                usuario: req.body.user
+            }
+        })
+        if(usuarioBuscado === null ){
+            console.log('Not found!');
+        } else {
+            if(bcrypt.compareSync(req.body.password,usuarioBuscado.password)){
+                usuarioLogueado = usuariosArray[i];
+                console.log(usuarioLogueado);
+                return res.redirect('/user/index');
+            } else {
+                console.log('Password doesnt match!');
+                return res.redirect('/');
+            }
         }
-        res.redirect('/user/index');
+        
     },
 }

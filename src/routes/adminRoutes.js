@@ -11,15 +11,13 @@ router.post ('/register',[
     .isLength({
       min: 8
     })
-    .withMessage("La contraseña debe tenes al menos 8 caracteres")
     .custom(() => {
       if (req.body.password === req.body.rePassword) {
         return true;
       } else {
         return false;
       }
-    })
-    .withMessage("Las contraseñas no coinciden"),
+    }),
 ],adminController.crearCuenta);
 
 module.exports = router;

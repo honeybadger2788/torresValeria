@@ -1,0 +1,24 @@
+<header>
+<div>
+    <div class="menu">
+        <input type="checkbox" id="burger">
+        <label for="burger" class="menu">
+            <div class="burger"></div>
+            <div class="burger"></div>
+            <div class="burger"></div>
+        </label>
+    </div>
+    <nav class="list">
+        <ul>
+            <li><a href="/user/gastos">Carga de gastos</a></li>
+            <li><a href="/user/estadias">Carga de estadías</a></li>
+            <li><a href="/user/informe">Estado actual de cuentas</a></li>
+        </ul>
+    </nav>
+</div>
+    <% if( typeof usuarioLogueado != "undefined") {%>
+        <div class="chip">
+            <a href="/user/<%= usuarioLogueado.id %>"><img src="/img/img_avatar.png" alt="Profile" width="96" height="96"><%= usuarioLogueado.usuario %> </a>
+        </div> 
+    <% } else { null }%>
+</header>

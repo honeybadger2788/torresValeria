@@ -4,6 +4,7 @@
 @import 'styleGastos.css';
 @import 'styleEstadias.css';
 @import 'styleInforme.css';
+@import 'styleProfile.css';
 
 :root {
     --color-wintergreen: #6B9080;
@@ -29,13 +30,11 @@ body {
     font-family: Roboto;
     font-weight: bold;
     height: 120vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-label.menuMobile {
-    margin-bottom: 10px;
+header {
+    display: flex;
+    align-self: flex-start;
 }
 
 button.cargar {
@@ -52,6 +51,25 @@ button.cargar {
 button.cargar:hover {
     color: var(--color-wintergreen);
     background: var(--color-lightcyan);
+}
+
+div.burger {
+    background: var(--color-wintergreen);
+    margin: 5px;
+    padding: 5px;
+    width: 35px;
+    border-radius: 10px;
+}
+
+div.menu {
+    background: var(--color-mintcream);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+h3 { 
+    margin: 20px 0; 
+    text-align: center;
 }
 
 @media (max-width:768px){

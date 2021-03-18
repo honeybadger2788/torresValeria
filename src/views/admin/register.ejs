@@ -2,24 +2,25 @@
 <html lang="en">
 <%- include('../partials/head')%>
 <body>
-    <section class="login">
-        <hr>
-        <h3>CREAR NUEVO USUARIO</h1>
-        <form class="login" action="" method="POST">
-            <ul>
+    <section class="profile">
+        <%- include('../partials/menuProfile')%>
+        <div id="register" class="tabcontent">
+            <h3>CREAR NUEVO USUARIO</h3>
+            <ul style="list-style: none">
                 <% for(let i = 0; i < errors.length; i++ ) { %>
                     <li style="color: red"><%= errors[i].msg %> </li>
                 <% } %>  
             </ul>
-            <label for="user">Usuario</label>
-            <input type="text" name="user" id="user">
-            <label for="password">Contraseña</label>
-            <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-            <label for="rePassword">Confirmar contraseña</label>
-            <input type="password" name="rePassword" id="rePassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-            <button class="cargar" type="submit">REGISTRAR</button>
-        </form>
-        <hr>
+            <form class="login" action="" method="POST">
+                <label for="user">Usuario</label>
+                <input type="text" name="user" id="user">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <label for="rePassword">Confirmar contraseña</label>
+                <input type="password" name="rePassword" id="rePassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <button class="cargar" type="submit">REGISTRAR</button>
+            </form>
+        </div>
     </section>
 </body>
 </html>

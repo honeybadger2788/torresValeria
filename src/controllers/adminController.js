@@ -11,7 +11,7 @@ module.exports = {
     },
     crearCuenta: function (req,res){
         let errors = validationResult(req);
-        if (errors.isEmpty()){
+        if (errors.isEmpty() && req.body.password == req.body.rePassword){
             db.Usuario.findOrCreate({
                     where: {
                         usuario: req.body.user,
@@ -21,20 +21,18 @@ module.exports = {
                     }
                 })
                 .then (function(resultado){
-                    if(resultado){
+                    if(!resultado[1]){
+                        errors.errors.push({msg: "Usuario ya registrado"})
                         return res.render('./admin/register', {
-                            errors: [ 
-                                {
-                                errors:
-                                    {msg: "Usuario ya existente"},
-                                }
-                            ]
+                            errors: errors.errors
                         })
                     } else {
                         return res.redirect('/')
                     }
-                });
+                })
+                .catch((e)=>res.json(e))
         } else {
+            errors.errors.push({msg: "Las contraseñas no coinciden"})
             return res.render('./admin/register', {
                 errors:  errors.errors
             })

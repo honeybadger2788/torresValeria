@@ -3,6 +3,9 @@ PANTALLA ESTADIAS
 ==========================*/
 
 section.estadias {
+    position: absolute;
+    left: 50vh;
+    top: 25vh;
     width: 50%;
     padding: 20px;
     background: var(--color-mintcream);
@@ -10,12 +13,6 @@ section.estadias {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-section.estadias nav.menu {
-    align-self: start;
-    margin-left: 15px;
-    margin-top: 10px;
 }
 
 section.estadias hr {
@@ -58,8 +55,6 @@ section.estadias form select {
     }
 
     section.estadias form {height: 100vh;}
-
-    section.estadias nav.menu {display: none;}
 
     section.estadias hr {
         margin-top: 5px;

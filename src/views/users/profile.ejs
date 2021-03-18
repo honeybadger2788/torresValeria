@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head')%>
+<body>
+  <%- include('../partials/header')%>
+  <section class="profile">
+    <%- include('../partials/menuProfile')%>
+    <div id="changePassword" class="tabcontent">
+      <h3>CAMBIAR CONTRASEÑA</h3>
+      <form class="login" action="" method="POST">
+        <label for="">Contraseña actual</label>
+        <input type="password">
+        <label for="">Nueva contraseña</label>
+        <input type="password">
+        <label for="">Repetir contraseña</label>
+        <input type="password">
+        <button type="submit" class="cargar">GUARDAR</button>
+      </form>
+    </div> 
+  </section>
+</body>
+</html>

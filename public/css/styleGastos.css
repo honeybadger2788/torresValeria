@@ -3,6 +3,9 @@ PANTALLA GASTOS
 ==========================*/
 
 section.gastos {
+    position: absolute;
+    left: 50vh;
+    top: 25vh;
     width: 50%;
     padding: 20px;
     background: var(--color-mintcream);
@@ -12,25 +15,9 @@ section.gastos {
     align-items: center;
 }
 
-section.gastos nav.menu {
-    align-self: start;
-    margin-left: 15px;
-    margin-top: 10px;
-}
-
 ul li {
     list-style: none;
     padding: 5px;
-}
-
-#burger, label.menuMobile {
-    display: none;
-    align-self: start;
-}
-
-label img {
-    margin-top: 15px;
-    margin-left: 15px;
 }
 
 section.gastos hr {

@@ -4,17 +4,9 @@
     <%- include('../partials/head')%>
 </head>
 <body>
+    <%- include('../partials/header')%>
     <section class="informe">
-        <input type="checkbox" id="burger">
-        <label for="burger" class="menuMobile"><img src="/img/mobileMenu.png" alt=""></label>
-        <nav class="menu">
-            <ul>
-                <li><a href="/user/gastos">Carga de gastos</a></li>
-                <li><a href="/user/estadias">Carga de estadías</a></li>
-                <li><a href="/user/informe">Estado actual de cuentas</a></li>
-            </ul>
-        </nav>
-        <hr>
+        <h3>INFORME</h3>
         <table class="table table-success table-striped">
             <thead>
                 <tr>
@@ -30,14 +22,16 @@
             </thead>
             <tbody>
                 <tr>
+                    <% for(let i=0; i<informe.length; i++){ %> 
                     <th scope="row">1</th>
-                    <td>Mark</td>
+                    <td><%= informe[i].fecha %> </td>
                     <td>Otto</td>
                     <td>@mdo</td>
                     <td>@mdo</td>
                     <td>@mdo</td>
                     <td><a class="edit" href="">EDITAR</a></td>
                     <td><a class="borrar" href=""><img src="/img/basura.png" height="20" alt=""></a></td>
+                    <% } %> 
                 </tr>
             </tbody>
         </table>

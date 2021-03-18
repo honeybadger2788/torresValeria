@@ -2,18 +2,15 @@
 <html lang="en">
     <%- include('../partials/head')%>
 <body>
+    <%- include('../partials/header')%>
     <section class="gastos">
-        <input type="checkbox" id="burger">
-        <label for="burger" class="menuMobile"><img src="/img/mobileMenu.png" alt=""></label>
-        <nav class="menu">
-            <ul>
-                <li><a href="/user/gastos">Carga de gastos</a></li>
-                <li><a href="/user/estadias">Carga de estadías</a></li>
-                <li><a href="/user/informe">Estado actual de cuentas</a></li>
-            </ul>
-        </nav>
-        <hr>
-        <form action="/user/gastos" method="POST">
+        <h3>CARGA DE GASTOS</h3>
+        <ul style="list-style: none">
+            <% for(let i = 0; i < errors.length; i++ ) { %>
+                <li style="color: red"><%= errors[i].msg %> </li>
+            <% } %>  
+        </ul>
+        <form action="" method="POST">
             <label for="fechaGasto">Fecha de gasto</label>
             <input type="date" id="fechaGasto" name="fechaGasto" required>
 
@@ -21,7 +18,7 @@
             <input type="text" id="concepto" name="concepto" required>
             
             <label for="importe">Importe</label>
-            <input type="text" id="importe" name="importeGasto" required>
+            <input type="text" id="importe" name="importe" required>
             
             <label>Tipo de gasto</label>
             <select name="tipoGasto" required>
@@ -44,6 +41,7 @@
                 <option value="Ar">Ariel</option>
                 <option value="Ba">Barbara</option>
                 <option value="Fa">Facundo</option>
+                <option value="Ca">Caja</option>
             </select>
             
             <label for="comentario">Comentario</label>

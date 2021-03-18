@@ -2,32 +2,29 @@
 <html lang="en">
 <%- include('../partials/head')%>
 <body>
+    <%- include('../partials/header')%>
     <section class="estadias">
-        <input type="checkbox" id="burger">
-        <label for="burger" class="menuMobile"><img src="/img/mobileMenu.png" alt=""></label>
-        <nav class="menu">
-            <ul>
-                <li><a href="/user/gastos">Carga de gastos</a></li>
-                <li><a href="/user/estadias">Carga de estadías</a></li>
-                <li><a href="/user/informe">Estado actual de cuentas</a></li>
-            </ul>
-        </nav>
-        <hr>
-        <form action="/user/estadias" method="POST">
+        <h3>CARGA DE ESTADIAS</h3>
+        <ul style="list-style: none">
+            <% for(let i = 0; i < errors.length; i++ ) { %>
+                <li style="color: red"><%= errors[i].msg %> </li>
+            <% } %>  
+        </ul>
+        <form action="" method="POST">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" required>
 
             <label for="fechaIn">Fecha de ingreso</label>
-            <input type="date" id="fechaIn" name="fechaIn" required>
+            <input type="date" id="fechaIn" name="fechaIngreso" required>
 
             <label for="fechaOut">Fecha de egreso</label>
-            <input type="date" id="fechaOut" name="fechaOut" required>
+            <input type="date" id="fechaOut" name="fechaEgreso" required>
 
             <label for="importeTotal">Importe Total</label>
             <input type="text" id="importeTotal" name="importeTotal" required>
 
             <label for="importeDepo">Importe Depósito</label>
-            <input type="text" id="importeDepo" name="importeDepo" required>
+            <input type="text" id="importeDepo" name="importeDeposito" required>
 
             <label>Unidad</label>
             <select name="tipoGasto" required>
@@ -48,6 +45,7 @@
                 <option value="Ar">Ariel</option>
                 <option value="Ba">Barbara</option>
                 <option value="Fa">Facundo</option>
+                <option value="Ca">Caja</option>
             </select>
 
 
